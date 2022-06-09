@@ -108,8 +108,27 @@ export default function NewProduct() {
           />
         </div>
         <div className="addProductItem">
+          <label>Color</label>
+          <input
+            name="color"
+            type="text"
+            placeholder="white,black,red,blue,yellow,green"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="addProductItem">
+          <label>Size</label>
+          <input
+            name="size"
+            type="text"
+            placeholder="XS,S,M,L,XL"
+            onChange={handleChange}
+          />
+        </div>
+     
+        <div className="addProductItem">
           <label>Categories</label>
-          <input type="text" placeholder="jeans,skirt" onChange={handleCat} />
+          <input type="text" placeholder="Women,Men,Kids" onChange={handleCat} />
         </div>
         <div className="addProductItem">
           <label>Stock</label>
