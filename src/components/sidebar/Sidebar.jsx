@@ -32,11 +32,11 @@ const Sidebar = () => {
             </Link>
             <li className="sidebarListItem">
               <TimelineIcon className="sidebarIcon" />
-              Analytics
+              {/* Analytics */}Coming..
             </li>
             <li className="sidebarListItem">
               <TrendingUpIcon className="sidebarIcon" />
-              Sales
+              {/* Sales */}Coming..
             </li>
           </ul>
         </div>
@@ -49,20 +49,22 @@ const Sidebar = () => {
               Users
             </li>
             </Link>
-            <Link to="/products"  className="link" >
+          
             <li className="sidebarListItem">
+              <AttachMoney className="sidebarIcon" />
+              {/* Transactions */}Coming..
+            </li>
+            
+            <Link to="/products"  className="link" >
+            <li className="sidebarListItem active">
               <Storefront className="sidebarIcon" />
               Products
             </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
 
             <li className="sidebarListItem">
               <BarChartOutlined className="sidebarIcon" />
-              Reports
+              {/* Reports */}Coming..
             </li>
           </ul>
         </div>
@@ -71,15 +73,15 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <MailOutline className="sidebarIcon" />
-              Mail
+              {/* Mail */}Coming..
             </li>
             <li className="sidebarListItem">
               <DynamicFeed className="sidebarIcon" />
-              Feedback
+              {/* Feedback */}Coming..
             </li>
             <li className="sidebarListItem">
               <ChatBubbleOutline className="sidebarIcon" />
-              Messages
+              {/* Messages */}Coming..
             </li>
           </ul>
         </div>
@@ -88,15 +90,15 @@ const Sidebar = () => {
           <ul className="sidebarList">
             <li className="sidebarListItem">
               <WorkOutline className="sidebarIcon" />
-              Manage
+              {/* Manage */} Coming..
             </li>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon" />
-              Analytics
+              {/* Analytics */} Coming..
             </li>
             <li className="sidebarListItem">
               <Report className="sidebarIcon" />
-              Reports
+              {/* Reports */} Coming..
             </li>
           </ul>
         </div>

@@ -74,7 +74,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: " Rs 120.00",
     },
     {
       id: 2,
@@ -83,7 +83,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 3,
@@ -92,7 +92,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 4,
@@ -101,7 +101,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 5,
@@ -110,7 +110,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 6,
@@ -119,7 +119,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 7,
@@ -128,7 +128,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 8,
@@ -137,7 +137,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 8,
@@ -146,7 +146,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
     {
       id: 10,
@@ -155,7 +155,7 @@ export const userData = [
         "https://pbs.twimg.com/profile_images/901947348699545601/hqRMHITj_400x400.jpg",
       email: "john@gmail.com",
       status: "active",
-      transactions: "$120.00",
+      transactions: "Rs120.00",
     },
   ];
 
@@ -167,7 +167,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 2,
@@ -176,7 +176,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 3,
@@ -185,7 +185,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 4,
@@ -194,7 +194,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 5,
@@ -203,7 +203,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 6,
@@ -212,7 +212,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 7,
@@ -221,7 +221,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 8,
@@ -230,7 +230,7 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 8,
@@ -239,7 +239,7 @@ export const userData = [
         "https://cdn.techjuice.pk/wp-content/uploads/2017/02/sumail.jpg",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
     {
       id: 10,
@@ -248,6 +248,6 @@ export const userData = [
         "https://www.gamespot.com/a/uploads/original/1551/15516851/2919238-screen%20shot%202015-08-09%20at%2010.49.01%20pm.png",
       stock: "123",
       status: "active",
-      price: "$120.00",
+      price: "Rs120.00",
     },
   ];

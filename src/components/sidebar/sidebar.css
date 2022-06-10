@@ -29,10 +29,14 @@
   align-items: center;
   border-radius: 10px;
 }
-.sidebarListItem.active,
-.sidebarListItem:hover {
+
+.sidebarListItem:hover,.sidebarListItem.active {
   background-color: rgb(224, 224, 231);
 }
+
+/* .sidebarListItem.active{
+  background: rgb(224,224,231);
+} */
 
 .sidebarIcon {
   margin-right: 5px;

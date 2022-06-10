@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import "./product.css";
 import { useEffect, useMemo, useState } from "react";
 import Chart from "../../components/charts/Chart";
-import { productData } from "../../dummyData";
+
 import PublishIcon from "@mui/icons-material/Publish";
 import { useSelector } from "react-redux";
 import { userRequest } from "../../requestMethod";
@@ -95,6 +95,10 @@ export default function Product() {
             <input type="text" placeholder={product.desc} />
             <label>Price</label>
             <input type="text" placeholder={product.price} />
+            <label>Color</label>
+            <input type="text" placeholder={product.color} />
+            <label>Size</label>
+            <input type="text" placeholder={product.size} />
             <label>In Stock</label>
             <select name="inStock" id="idStock">
               <option value="true">Yes</option>
