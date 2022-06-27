@@ -2,21 +2,18 @@ import "./productList.css";
 
 import { DataGrid } from "@material-ui/data-grid";
 
-// import { productRows } from "../../dummyData";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { DeleteOutline } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteProduct, getProducts } from "../../redux/apiCalls";
 
 export default function ProductList() {
-  // const [data, setData] = useState(productRows);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
 
   const handleDelete = (id) => {
-    // setData(data.filter((item) => item.id !== id));
-    deleteProduct(id,dispatch);
+    deleteProduct(id, dispatch);
   };
 
   useEffect(() => {

@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { userRows } from "../../dummyData";
-import { Link } from "react-router-dom";
-const UserList = () => {
-const [data,setData]=useState(userRows)
 
-const handleDelte=(id)=>{
-    setData(data.filter(item=>item.id !== id ))
-}
+import { getUsers, deleteUser } from "../../redux/apiCalls";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+
+const UserList = () => {
+  const dispatch = useDispatch();
+  const users = useSelector((state) => state.user.users);
+  console.log("users", users);
+  useEffect(() => {
+    getUsers(dispatch);
+  }, []);
+
+  const handleDelete = (id) => {
+    deleteUser(id, dispatch);
+  };
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
+    { field: "_id", headerName: "ID", width: 70 },
     {
       field: "user",
       headerName: " User",
@@ -19,7 +27,7 @@ const handleDelte=(id)=>{
       renderCell: (params) => {
         return (
           <div className="userListUser">
-            <img className="userListImg" src={params.row.avatar} alt="" />
+            <img className="userListImg" src={params.row.img} alt="" />
             {params.row.username}
           </div>
         );
@@ -30,19 +38,15 @@ const handleDelte=(id)=>{
       headerName: "Email",
       width: 200,
     },
-    {
-      field: "status",
-      headerName: "status",
 
-      width: 90,
-    },
     {
-      field: "transactions",
-      headerName: "Transactions volume",
+      field: "isAdmin",
+      headerName: "Admin",
       description: "This column has a value getter and is not sortable.",
 
       width: 160,
     },
+
     {
       field: "action",
       headerName: "Action",
@@ -50,10 +54,13 @@ const handleDelte=(id)=>{
       renderCell: (params) => {
         return (
           <div>
-            <Link to={"/user/" + params.row.id}>
+            <Link to={"/user/" + params.row._id}>
               <button className="userListEdit">Edit</button>
             </Link>
-            <DeleteOutlineIcon className="userListDelete"  onClick={()=>handleDelte(params.row.id)} />
+            <DeleteOutlineIcon
+              className="userListDelete"
+              onClick={() => handleDelete(params.row._id)}
+            />
           </div>
         );
       },
@@ -62,11 +69,12 @@ const handleDelte=(id)=>{
 
   return (
     <div className="userList">
-      <DataGrid 
-        rows={data}
+      <DataGrid
+        rows={users || []}
         disableSelectionOnClick
         columns={columns}
-        pageSize={8}
+        getRowId={(row) => row._id}
+        pageSize={10}
         checkboxSelection
       />
     </div>

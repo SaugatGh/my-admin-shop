@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const userSlice = createSlice({
   name: "user",
   initialState: {
+    users: [],
     currentUser: null,
     isFetching: false,
     error: false,
@@ -20,12 +21,65 @@ const userSlice = createSlice({
       state.error = true;
     },
     logout: (state) => {
-      state.currentuse = null;
+      state.currentUser = null;
+      console.log(state.currentUser);
+    },
+    getUserStart: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    getUserSuccess: (state, action) => {
+      state.isFetching = false;
+      state.users = action.payload;
+    },
+    getUserFailure: (state) => {
+      state.isFetching = false;
+      state.error = true;
+    },
+    addUserStart: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    addUserSuccess: (state, action) => {
+      state.isFetching = true;
+      state.users.push(action.payload);
+    },
+    addUserFailure: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    deleteUserStart: (state) => {
+      state.isFetching = true;
+      state.error = false;
+    },
+    deleteUserSuccess: (state, action) => {
+      state.isFetching = true;
+      state.users.splice(
+        state.users.findIndex((item) => item._id === action.payload),
+        1
+      );
+    },
+    deleteUserFailure: (state) => {
+      state.isFetching = false;
+      state.error = true;
     },
   },
 });
 
-export const { loginStart, loginSuccess, loginFailure } = userSlice.actions;
+export const {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  logout,
+  getUserStart,
+  getUserSuccess,
+  getUserFailure,
+  addUserStart,
+  addUserSuccess,
+  addUserFailure,
+  deleteUserStart,
+  deleteUserSuccess,
+  deleteUserFailure,
+} = userSlice.actions;
 export default userSlice.reducer;
-
-// payload is basically a new product
+export const user = (state) => state.user.currentUser;

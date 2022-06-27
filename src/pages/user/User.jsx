@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./user.css";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
@@ -6,8 +6,17 @@ import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
 import PublishIcon from "@mui/icons-material/Publish";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 const User = () => {
+  const location = useLocation();
+  const userId = location.pathname.split("/")[2];
+  const [stats, setStats] = useState([]);
+
+  const user = useSelector((state) =>
+    state.user.users.find((user) => user._id === userId)
+  );
   return (
     <div className="user">
       <div className="userTitleContainer">
@@ -25,7 +34,7 @@ const User = () => {
               className="userShowImg"
             />
             <div className="userShowTopTitle">
-              <span className="userShowUsername">Anna Becker</span>
+              <span className="userShowUsername">{user.username}</span>
               <span className="userShowTitle">Software engineer</span>
             </div>
           </div>
@@ -33,7 +42,7 @@ const User = () => {
             <span className="userShowTitle">Account Detailss</span>
             <div className="userShowInfo">
               <PermIdentityIcon className="userShowIcon" />
-              <span className="userShowInfoTitle">annabeck99</span>
+              <span className="userShowInfoTitle">{user.username}</span>
             </div>
             <div className="userShowInfo">
               <CalendarTodayIcon className="userShowIcon" />
@@ -46,7 +55,7 @@ const User = () => {
             </div>
             <div className="userShowInfo">
               <MailOutlineIcon className="userShowIcon" />
-              <span className="userShowInfoTitle">annabeck@gmail.com</span>
+              <span className="userShowInfoTitle">{user.email}</span>
             </div>
             <div className="userShowInfo">
               <LocationSearchingIcon className="userShowIcon" />
@@ -62,7 +71,7 @@ const User = () => {
                 <label>Username</label>
                 <input
                   type="text"
-                  placeholder="annabeck99"
+                  placeholder={user.email}
                   className="userUpdateInput"
                 />
               </div>
@@ -70,7 +79,7 @@ const User = () => {
                 <label>Full Name</label>
                 <input
                   type="text"
-                  placeholder="Anna Becker"
+                  placeholder={user.username}
                   className="userUpdateInput"
                 />
               </div>
@@ -78,7 +87,7 @@ const User = () => {
                 <label>Email</label>
                 <input
                   type="text"
-                  placeholder="annabeck@gmail.com"
+                  placeholder={user.email}
                   className="userUpdateInput"
                 />
               </div>
